@@ -1,0 +1,22 @@
+
+[:python_version < "3.10"]
+importlib-metadata
+
+[build]
+cmake<4.0,>=3.20
+lit
+
+[tests]
+autopep8
+isort
+llnl-hatchet
+numpy
+pytest
+pytest-forked
+pytest-xdist
+scipy>=1.7.1
+
+[tutorials]
+matplotlib
+pandas
+tabulate

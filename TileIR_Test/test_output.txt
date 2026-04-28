@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /data/TileIR_Test
+collecting ... collected 6 items
+
+tests/test_polycube_benefit_fix.py::TestWaveCompositeCoords::test_composite_larger_than_unit PASSED [ 16%]
+tests/test_polycube_benefit_fix.py::TestWaveCompositeCoords::test_composite_projections_gte_unit PASSED [ 33%]
+tests/test_polycube_benefit_fix.py::TestWaveCompositeCoords::test_all_coords_in_bounds PASSED [ 50%]
+tests/test_polycube_benefit_fix.py::TestWaveCompositeCoords::test_single_point_unit_fills_sm PASSED [ 66%]
+tests/test_polycube_benefit_fix.py::TestWaveCompositeCoords::test_exact_copies_count PASSED [ 83%]
+tests/test_polycube_benefit_fix.py::TestBenefitScoreComparison::test_benefit_changes_for_majority_of_shapes PASSED [100%]
+
+============================== 6 passed in 13.72s ==============================

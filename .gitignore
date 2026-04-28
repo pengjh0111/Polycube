@@ -1,0 +1,77 @@
+# =========================
+# Build outputs
+# =========================
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env/
+
+# =========================
+# Pytest / cache
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# Torch / ML artifacts
+# =========================
+*.pt
+*.pth
+*.onnx
+
+# =========================
+# Large prebuilt libs (CRITICAL)
+# =========================
+libtorch/
+libtorch-cxx*/
+*.zip
+
+# =========================
+# GPU / CUDA artifacts
+# =========================
+*.o
+*.a
+*.so
+*.dylib
+*.nvcc
+*.cubin
+*.fatbin
+
+# =========================
+# IDE / system
+# =========================
+.vscode/
+.idea/
+.DS_Store
+
+# =========================
+# Logs / outputs
+# =========================
+logs/
+results/
+*.log
+
+# =========================
+# third_party build outputs ONLY
+# =========================
+third_party/**/build/
+third_party/**/CMakeFiles/
+third_party/**/*.o
+third_party/**/*.so
+third_party/**/*.a
+third_party/**/CMakeCache.txt

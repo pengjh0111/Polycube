@@ -1,0 +1,9 @@
+[console_scripts]
+proton = triton.profiler.proton:main
+proton-viewer = triton.profiler.viewer:main
+
+[triton.backends]
+amd = triton.backends.amd
+nvidia = triton.backends.nvidia
+tileir = triton.backends.tileir
+

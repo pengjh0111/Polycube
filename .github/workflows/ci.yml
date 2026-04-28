@@ -1,0 +1,32 @@
+name: Integration Tests
+on:
+  push:
+    branches:
+      - "pull-request/[0-9]+"
+      - "main"  # Main branch for this fork
+  schedule:
+    # Run nightly at 12 PM UTC
+    - cron: '0 12 * * *'
+  workflow_dispatch:  # Allow manual trigger
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+permissions:
+  contents: read
+  packages: write
+  pull-requests: read
+
+jobs:
+
+  runner-preparation:
+    uses: ./.github/workflows/runner-preparation.yml
+
+  # pre-commit:
+  #   uses: ./.github/workflows/pre-commit.yml
+  integration-tests-nvidia:
+    needs: runner-preparation
+    if: needs.runner-preparation.outputs.matrix-NVIDIA != ''
+    uses: ./.github/workflows/integration-tests-nvidia.yml
+    with:
+      matrix: ${{ needs.runner-preparation.outputs.matrix-NVIDIA }}
+

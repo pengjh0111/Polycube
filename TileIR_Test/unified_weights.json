@@ -1,0 +1,9 @@
+{
+  "lambda1": 0.0,
+  "lambda2": 1.1855356391763698,
+  "lambda3": 0.03633452660660296,
+  "lambda4": 0.0012237372270174594,
+  "c_atomic": 0.05,
+  "achieved_r": 0.7098757925640088,
+  "calibration_source": "results/multiwave_benchmark.json"
+}
